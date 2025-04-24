@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryokan Landing Page</title>
+  <!-- Website Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Edit the path to your favicon -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#bookings">Bookings</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="main" id="home">
+    <div class="hero">
+      <h1 class="logo">
+        <span>Ryokan.</span><span>com</span>
+      </h1>
+      <div class="slider">
+        <div class="slide active" style="background-image: url('images/image1.png');"></div>
+        <div class="slide" style="background-image: url('images/image2.jpg');"></div>
+        <div class="slide" style="background-image: url('images/image3.jpg');"></div>
+        <div class="slide" style="background-image: url('images/image4.jpg');"></div>
+        <div class="slide" style="background-image: url('images/image5.jpg');"></div>
+      </div>
+      <div class="pagination">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
+      <h2>Support</h2>
+      <p>Need help? Our support team is available 24/7 to assist you with any inquiries or issues you may have. Contact us via email or phone for prompt assistance.</p>
+      <div class="support-cards">
+        <div class="card">
+          <h3>Email Support</h3>
+          <p>Email us at <a href="mailto:support@ryokan.com">support@ryokan.com</a></p>
+        </div>
+        <div class="card">
+          <h3>Phone Support</h3>
+          <p>Call us at <a href="tel:+1234567890">+1 234 567 890</a></p>
+        </div>
+        <div class="card">
+          <h3>Live Chat</h3>
+          <p>Chat with us for instant support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="services-slider">
+        <button class="slider-btn left-btn">❮</button>
+        <div class="service-slide active">
+          <div class="service-image" style="background-image: url('images/room.jpg');"></div>
+          <div class="service-info">
+            <span class="service-name">Room</span>
+            <span class="service-price">$200/night</span>
+          </div>
+        </div>
+        <div class="service-slide">
+          <div class="service-image" style="background-image: url('images/spa.jpg');"></div>
+          <div class="service-info">
+            <span class="service-name">Zen Spa</span>
+            <span class="service-price">$150/session</span>
+          </div>
+        </div>
+        <div class="service-slide">
+          <div class="service-image" style="background-image: url('images/cuisine.jpg');"></div>
+          <div class="service-info">
+            <span class="service-name">Cuisine</span>
+            <span class="service-price">$50/meal</span>
+          </div>
+        </div>
+        <button class="slider-btn right-btn">❯</button>
+      </div>
+    </section>
+
+    <!-- Bookings Section -->
+    <section id="bookings" class="bookings">
+      <h2>Bookings</h2>
+      <p>Reserve your stay at Ryokan today! Choose from our luxurious rooms, relaxing spa packages, and exquisite dining options. Book now to experience the ultimate comfort and hospitality.</p>
+      <button class="booking-btn">Book Now</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>Welcome to Ryokan, where tradition meets luxury. Our mission is to provide an authentic Japanese experience with modern comforts. From serene rooms to world-class cuisine, we ensure your stay is unforgettable.</p>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ryokan. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://www.facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="24" height="24"></a></li>
+        <li><a href="https://www.twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24" height="24"></a></li></ul>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
