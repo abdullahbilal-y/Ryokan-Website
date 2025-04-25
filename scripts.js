@@ -1,40 +1,32 @@
-// Hero Section Slider
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-}
-
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}, 3000);
-
-// Services Section Slider
-const serviceSlides = document.querySelectorAll('.service-slide');
+const slides = document.querySelectorAll('.service-slide');
 const leftBtn = document.querySelector('.left-btn');
 const rightBtn = document.querySelector('.right-btn');
-let currentServiceSlide = 0;
 
-function showServiceSlide(index) {
-  serviceSlides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
+// Set the initial index to the middle slide
+let currentIndex = Math.floor(slides.length / 2);
+
+function updateSlides() {
+  slides.forEach((slide, index) => {
+    slide.classList.remove('active', 'left', 'right');
+    if (index === currentIndex) {
+      slide.classList.add('active');
+    } else if (index === currentIndex - 1 || (currentIndex === 0 && index === slides.length - 1)) {
+      slide.classList.add('left');
+    } else if (index === currentIndex + 1 || (currentIndex === slides.length - 1 && index === 0)) {
+      slide.classList.add('right');
+    }
   });
 }
 
 leftBtn.addEventListener('click', () => {
-  currentServiceSlide = (currentServiceSlide - 1 + serviceSlides.length) % serviceSlides.length;
-  showServiceSlide(currentServiceSlide);
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlides();
 });
 
 rightBtn.addEventListener('click', () => {
-  currentServiceSlide = (currentServiceSlide + 1) % serviceSlides.length;
-  showServiceSlide(currentServiceSlide);
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlides();
 });
+
+// Initialize the slider
+updateSlides();

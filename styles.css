@@ -144,24 +144,44 @@
   }
   
   .services-slider {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .service-slide {
-    display: none;
+    flex: 0 0 40%; /* Default size for non-active slides */
+    max-width: 300px; /* Limit the size of non-active slides */
+    height: 250px; /* Adjust height for non-active slides */
+    margin: 0 15px; /* Add spacing between slides */
+    transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
     position: relative;
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    overflow: hidden;
+    opacity: 0.5; /* Default opacity for non-active slides */
+    filter: blur(5px); /* Default blur for non-active slides */
   }
   
   .service-slide.active {
-    display: block;
+    flex: 0 0 60%; /* Active slide takes 60% of the width */
+    max-width: 400px; /* Increase size for the active slide */
+    height: 300px; /* Increase height for the active slide */
+    opacity: 1; /* Fully visible */
+    filter: blur(0); /* No blur for the active slide */
+    transform: scale(1.1); /* Slightly enlarge the active slide */
+    margin: 0 30px; /* Add extra spacing for the center slide */
+  }
+  
+  .service-slide.left,
+  .service-slide.right {
+    flex: 0 0 40%; /* Left and right slides take 40% of the width */
+    max-width: 300px; /* Limit size for left and right slides */
+    opacity: 0.7; /* Slightly more visible than non-active slides */
+    filter: blur(3px); /* Slight blur for left and right slides */
+    transform: scale(0.9); /* Slightly shrink left and right slides */
   }
   
   .service-image {
@@ -169,13 +189,14 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
   }
   
   .service-info {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: #fff;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
